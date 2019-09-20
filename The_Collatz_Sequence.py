@@ -10,5 +10,8 @@ def collatz(number):
 
 num = 0
 while num!=1:
-    number = int(input("Enter the number: "))
+    try:
+        number = int(input("Enter the number: "))
+    except ValueError:
+        number = int(input("Please enter Integer: "))
     num = collatz(number)
